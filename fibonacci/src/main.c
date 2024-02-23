@@ -16,7 +16,7 @@ unsigned long long int calculateFibonacci(FibonacciMethod method, int n) {
     return fib_dp(n);
   else {
     printf("Unknown method.\n");
-    exit(1);
+    exit(EXIT_FAILURE);
   }
 }
 
