@@ -16,14 +16,13 @@ unsigned long long int calculateFibonacci(FibonacciMethod method, int n) {
     return fib_dp(n);
   else {
     printf("Unknown method.\n");
-    exit(1);
+    exit(EXIT_FAILURE);
   }
 }
 
 double measureExecutionTime(FibonacciMethod method, int n, int repetitions) {
   clock_t start = clock();
-  for (int i = 0; i < repetitions; i++)
-    calculateFibonacci(method, n);
+  for (int i = 0; i < repetitions; i++) calculateFibonacci(method, n);
   clock_t end = clock();
 
   double duration = ((double)(end - start)) / CLOCKS_PER_SEC;
@@ -33,14 +32,19 @@ double measureExecutionTime(FibonacciMethod method, int n, int repetitions) {
 int main() {
   int n, times;
 
-  printf("This program calculates the running time of finding Fibonacci numbers using two different algorithms: ");
-  printf("a recursive algorithm and an iterative dynamic programming algorithm.\n");
+  printf(
+      "This program calculates the running time of finding Fibonacci "
+      "numbers using two different algorithms: "
+      "a recursive algorithm and an iterative dynamic programming "
+      "algorithm.\n");
 
   while (1) {
     printf("\nWhich Fibonacci number do you want to calculate: ");
     scanf("%d", &n);
 
-    printf("\nHow many times do you want to perform the calculation (in order to find an average running time): ");
+    printf(
+        "\nHow many times do you want to perform the calculation (in order "
+        "to find an average running time): ");
     scanf("%d", &times);
 
     double recursiveTime = measureExecutionTime(RECURSIVE, n, times);

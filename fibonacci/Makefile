@@ -8,7 +8,7 @@ LANG := c
 CCFLAGS :=
 CXXFLAGS := -std=c++20 -Wall -Wextra -pedantic -pthread
 
-## Example usage: make LANG=c/c++/cpp/rs/rust [CXXFLAGS=...]
+## Example usage: make LANG=c/c++/cpp/rs/rust [CCFLAGS/CXXFLAGS=...]
 
 PKG   = fibonacci
 BIN   = bin
@@ -67,6 +67,18 @@ run: $(TARGET) ## Run compiled program
 		echo Invalid LANG; \
 		exit 1; \
 	fi
+
+.PHONY: check
+check: format lint test ## Run code quality checks
+
+.PHONY: format
+format: ## Format code
+	find $(LIB) $(SRC) $(TESTS) -type f \( -name '*.c' -o -name '*.cpp' \) -exec clang-format -i {} -style=Google \;
+	cargo fmt
+
+.PHONY: lint
+lint: ## Lint code
+	cppcheck $(LIB) $(SRC) $(TESTS)
 
 .PHONY: test
 test: ## Run tests

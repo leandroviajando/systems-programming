@@ -24,8 +24,6 @@ int main() {
   test_fib_recursive();
   test_fib_dp();
 
-  std::cout << std::endl
-            << "All tests passed!" << std::endl
-            << std::endl;
+  std::cout << std::endl << "All tests passed!" << std::endl << std::endl;
   return 0;
 }
