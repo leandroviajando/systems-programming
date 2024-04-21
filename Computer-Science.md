@@ -40,6 +40,8 @@
 
 ## [Operating Systems (40h)](https://www.educative.io/courses/operating-systems-virtualization-concurrency-persistence)
 
+[Writing an OS in Rust](https://os.phil-opp.com/)
+
 ### The OS Kernel
 
 ### Process Management: Processes, Threads, and Inter-Process Communication
