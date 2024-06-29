@@ -23,6 +23,14 @@
 
   Rust's ownership system and borrowing rules allow the compiler to determine exactly when each piece of memory is no longer needed. At the end of a variable's lifetime (which the compiler tracks), Rust automatically inserts code to deallocate the memory. This is similar to a destructor, but it's handled by the language itself rather than requiring the programmer to write a destructor function.
 
+- Trade-offs in different scenarios:
+
+  - Real-time systems: C might be preferred for its predictability, while Rust could be a safer alternative. Go's GC pauses might be problematic.
+  - Large-scale server applications: Go's simplicity and built-in concurrency features might outweigh the GC overhead. Rust could offer a good balance of safety and performance.
+  - Embedded systems: C is often chosen for its minimal overhead, but Rust is gaining traction for its safety guarantees without runtime cost.
+  - Rapid prototyping: Go's simplicity and garbage collection can lead to faster development cycles.
+  - Performance-critical applications: C allows for maximum optimization, but Rust offers a compelling mix of safety and performance.
+
 ## Concurrency
 
 - How does each language ensure thread safety?
