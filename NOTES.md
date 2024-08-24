@@ -78,8 +78,6 @@ A standard Turing machine is a deterministic automaton with a two-way infinite t
 
 ## [Introduction to Logic: Basics of Mathematical Reasoning](https://www.educative.io/courses/introduction-to-logic-basics-of-mathematical-reasoning)
 
-TODO
-
 ### Propositional Logic
 
 ### First-Order Logic
@@ -521,7 +519,7 @@ Bit manipulation is the act of algorithmically manipulating bits or other pieces
 
    ```
 
-## [Operating Systems (40h)](https://www.educative.io/courses/operating-systems-virtualization-concurrency-persistence)
+## [Operating Systems](https://www.educative.io/courses/operating-systems-virtualization-concurrency-persistence)
 
 Writing to a file: `>` (overwrite) or `>>` (append)
 
@@ -848,8 +846,6 @@ Processes on different machines send messages to each other through the computer
 
 #### Hypertext Transfer Protocol (HTTP)
 
-TODO: continue here
-
 #### Cookies
 
 #### Email: SMTP, POP, IMAP
@@ -858,8 +854,34 @@ TODO: continue here
 
 ### The Transport Layer
 
+#### Multiplexing and Demultiplexing
+
+#### Congestion Control
+
+#### UDP
+
+#### Transmission Control Protocol (TCP)
+
 ### The Network Layer
+
+#### Static & Dynamic Routing
+
+#### The Internet Protocol: IPv4, IPv6
+
+#### The Internet Control Message Protocol (ICMP)
+
+#### Address Resolution Protocol (ARP)
+
+#### Dynamic Host Configuration Protocol (DHCP)
+
+#### Middleboxes: Firewalls
+
+#### Middleboxes: Network Address Translation (NAT)
 
 ### The Data Link Layer
 
-## [Databases (19h)](https://www.educative.io/courses/deep-dive-into-the-internals-of-the-database)
+#### Ethernet
+
+#### Virtual LANs
+
+## [Databases](https://www.educative.io/courses/deep-dive-into-the-internals-of-the-database)
